@@ -21,7 +21,7 @@ public class ArrayList implements List {
 
     @Override
     public boolean isEmpty() {
-        if (Array[0] = null){
+        if (Array[0] == null){
             return true;
         }
         else {
