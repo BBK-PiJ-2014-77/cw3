@@ -1,34 +1,53 @@
 package Implementations;
 import Interfaces.List;
 import Interfaces.ReturnObject;
+import Error.ErrorMessage;
 
 /**
  * Created by digibrose on 10/12/2014.
  */
 public class ArrayList implements List {
 
-    int[] Array = null;
+    private Object[] Array = new int[INIIALSIZE];
+    private static int INIIALSIZE = 5;
+
+    private int size = INIIALSIZE;
 
     /**
      * Constructor Method
      */
-    public ArrayList(int[] SetArray){
-        this.Array = SetArray;
+    public ArrayList(){
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        if (Array[0] = null){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public ReturnObject get(int index) {
-        return null;
+        if (index < size ){
+            if (Array[index] != null){
+                ReturnObject get = new ReturnObjectImpl(Array[index]);
+                return get;
+            }
+            else {
+                ReturnObject get = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
+            }
+        }
+        else{
+            ReturnObject get = new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
+        }
     }
 
     @Override
