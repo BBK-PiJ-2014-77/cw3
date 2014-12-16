@@ -8,10 +8,11 @@ import Error.ErrorMessage;
  */
 public class ArrayList implements List {
 
-    private Object[] Array = new int[INIIALSIZE];
+    private Object[] Array = new Object[INIIALSIZE];
     private static int INIIALSIZE = 5;
 
     private int size = INIIALSIZE;
+    private int freespace = 0;
 
     /**
      * Constructor Method
@@ -43,25 +44,57 @@ public class ArrayList implements List {
             }
             else {
                 ReturnObject get = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
+                return get;
             }
         }
         else{
             ReturnObject get = new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
+            return  get;
         }
     }
 
     @Override
     public ReturnObject remove(int index) {
-        return null;
+        if (index > freespace) {
+            ReturnObject remove = new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
+            freespace = freespace - 1;
+            return remove;
+        } else {
+            ReturnObject remove = new ReturnObjectImpl(Array[index]);
+            for (int i = index; i < freespace; i++) {
+                Array[i] = Array[i + 1];
+            }
+            freespace = freespace - 1;
+            return remove;
+        }
     }
 
     @Override
     public ReturnObject add(int index, Object item) {
+
         return null;
     }
 
     @Override
     public ReturnObject add(Object item) {
-        return null;
+        if (freespace == size - 2) {
+            Object NA[] = new Object[size * 2];
+            for (int i = 0; i < size; i++) {
+                NA[i] = Array[i];
+
+            }
+            this.Array = NA;
+            size = size * 2;
+        }
+        if (item != null) {
+            Array[freespace] = item;
+            freespace++;
+            ReturnObject add = new ReturnObjectImpl(ErrorMessage.NO_ERROR);
+            return add;
+        }
+        else {
+            ReturnObject add = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
+            return add;
+        }
     }
 }
