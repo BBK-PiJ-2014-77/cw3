@@ -55,6 +55,19 @@ public class ArrayListTest {
         System.out.println(TestAL.remove(2).getReturnValue());
         System.out.println(TestAL.remove(7).getReturnValue());
 
+        System.out.println(TestAL.size());
+
+        for (int i = 0;i < TestAL.size();i++){
+            System.out.println(TestAL.get(i).getReturnValue());
+        }
+
+        System.out.println(TestAL.add(5, I).getReturnValue());
+        System.out.println(TestAL.add(2, I).getReturnValue());
+
+        for (int i = 0;i < TestAL.size();i++){
+            System.out.println(TestAL.get(i).getReturnValue());
+        }
+
 
     }
 

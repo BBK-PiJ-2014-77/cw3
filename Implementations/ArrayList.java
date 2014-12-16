@@ -32,7 +32,7 @@ public class ArrayList implements List {
 
     @Override
     public int size() {
-        return size;
+        return freespace;
     }
 
     @Override
@@ -57,7 +57,6 @@ public class ArrayList implements List {
     public ReturnObject remove(int index) {
         if (index > freespace) {
             ReturnObject remove = new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
-            freespace = freespace - 1;
             return remove;
         } else {
             ReturnObject remove = new ReturnObjectImpl(Array[index]);
@@ -71,20 +70,26 @@ public class ArrayList implements List {
 
     @Override
     public ReturnObject add(int index, Object item) {
-
-        return null;
+        if (freespace == size -2){
+            increaseSpace();
+        }
+        if (index >= freespace){
+            ReturnObject add = new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
+            return add;
+        }
+        for (int i = freespace; i >= index; i--){
+            Array[i+1]= Array[i];
+        }
+        Array[index] = item;
+        freespace++;
+        ReturnObject add = new ReturnObjectImpl(ErrorMessage.NO_ERROR);
+        return add;
     }
 
     @Override
     public ReturnObject add(Object item) {
         if (freespace == size - 2) {
-            Object NA[] = new Object[size * 2];
-            for (int i = 0; i < size; i++) {
-                NA[i] = Array[i];
-
-            }
-            this.Array = NA;
-            size = size * 2;
+            increaseSpace();
         }
         if (item != null) {
             Array[freespace] = item;
@@ -96,5 +101,15 @@ public class ArrayList implements List {
             ReturnObject add = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
             return add;
         }
+    }
+
+    private void increaseSpace(){
+        Object NA[] = new Object[size * 2];
+        for (int i = 0; i < size; i++) {
+            NA[i] = Array[i];
+
+        }
+        this.Array = NA;
+        size = size * 2;
     }
 }
