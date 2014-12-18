@@ -30,5 +30,22 @@ public class LinkedListTest {
 
         System.out.println(TestLL.get(3).getReturnValue());
 
+        System.out.println(TestLL.remove(1).getReturnValue());
+        System.out.println(TestLL.get(1).getReturnValue());
+        System.out.println(TestLL.get(2).getReturnValue());
+
+        System.out.println(TestLL.remove(0).getReturnValue());
+        System.out.println(TestLL.get(0).getReturnValue());
+
+        System.out.println(TestLL.add(0, A).getReturnValue());
+
+        System.out.println(TestLL.get(0).getReturnValue());
+        System.out.println(TestLL.size());
+
+        System.out.println(TestLL.remove(0).getReturnValue());
+        System.out.println(TestLL.remove(0).getReturnValue());
+
+        System.out.println(TestLL.remove(0).getReturnValue());
+
     }
 }

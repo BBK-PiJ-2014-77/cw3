@@ -8,6 +8,14 @@ public class Node {
     private Object NodeObject = null;
     private Node NextNode = null;
 
+    public Node(){
+
+    }
+
+    public Node(Object obj){
+        setObject(obj);
+    }
+
     public Object getObject(){
         return NodeObject;
     }
