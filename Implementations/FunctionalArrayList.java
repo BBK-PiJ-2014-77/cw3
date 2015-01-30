@@ -29,7 +29,7 @@ public class FunctionalArrayList extends ArrayList implements FunctionalList {
 
     /**
      * Method to return a new FunctionaList that contains everything except the initial entry
-     * @return FunctionalList rest
+     * @return FunctionalArrayList rest
      */
 
     @Override

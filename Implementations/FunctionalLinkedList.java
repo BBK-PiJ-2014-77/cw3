@@ -9,6 +9,12 @@ import Error.ErrorMessage;
  */
 public class FunctionalLinkedList extends LinkedList implements FunctionalList{
 
+
+    /**
+     * Method to return the first entry into a list
+     * @return ReturnObject head
+     */
+
     @Override
     public ReturnObject head() {
         if (isEmpty()) {
@@ -20,6 +26,11 @@ public class FunctionalLinkedList extends LinkedList implements FunctionalList{
             return head;
         }
     }
+
+    /**
+     * Method to return a new FunctionaList that contains everything except the initial entry
+     * @return FunctionalLinkedList rest
+     */
 
     @Override
     public FunctionalList rest() {
