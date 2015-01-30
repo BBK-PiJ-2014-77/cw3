@@ -1,23 +1,23 @@
 package Implementations;
 
-import Interfaces.ReturnObject;
+
 import Interfaces.SampleableList;
-import Implementations.LinkedList;
-import Error.ErrorMessage;
+
 
 /**
  * Created by digibrose on 18/12/2014.
  */
 public class SampleableListImpl extends LinkedList implements SampleableList {
 
-
+    /**
+     * Method to return a sample of the list of odd elements or an empty list if empty
+     *
+     * @return SampleableList sample containing a sample of the 1st 3rd etc elements in a list or an empty list
+     */
         @Override
         public SampleableList sample() {
             if (isEmpty()){
-                ReturnObject sp = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
-                SampleableListImpl sample = new SampleableListImpl();
-                sample.add(sp);
-                return sample;
+                return new SampleableListImpl();
             }
             else {
                 SampleableList sample = new SampleableListImpl();

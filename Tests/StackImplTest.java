@@ -1,10 +1,8 @@
 package Tests;
 
 import Implementations.LinkedList;
-import Implementations.SampleableListImpl;
 import Implementations.StackImpl;
 import Interfaces.List;
-import Implementations.ReturnObjectImpl;
 
 /**
  * Created by digibrose on 19/12/2014.
@@ -12,6 +10,14 @@ import Implementations.ReturnObjectImpl;
 public class StackImplTest {
 
     public static void main(String[] args) {
+
+        List SL0 = null;
+
+        StackImpl SI1 = new StackImpl(SL0);
+
+        System.out.println(SI1.isEmpty());
+        System.out.println(SI1.size());
+        System.out.println(SI1.top().getReturnValue());
 
         List SL = new LinkedList();
 

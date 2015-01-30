@@ -3,7 +3,9 @@ package AutoTests;
 import Implementations.LinkedList;
 import Implementations.StackImpl;
 import Interfaces.List;
+import Interfaces.Stack;
 import org.junit.Test;
+import Error.ErrorMessage;
 
 import static org.junit.Assert.*;
 
@@ -51,6 +53,15 @@ public class StackImplTest {
         Object expected = C;
         Object output = SI.top().getReturnValue();
         assertEquals(output, expected);
+    }
+
+    @Test
+    public void testTop1(){
+        List L1 = null;
+        Stack SI1 = new StackImpl(L1);
+        Object expected = ErrorMessage.EMPTY_STRUCTURE;
+        Object observed = SI1.top().getReturnValue();
+        assertEquals(observed, expected);
     }
 
     @Test

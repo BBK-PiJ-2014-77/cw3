@@ -1,7 +1,6 @@
 package Tests;
 
 import Implementations.SampleableListImpl;
-import Implementations.LinkedList;
 import Interfaces.SampleableList;
 
 /**
@@ -16,6 +15,8 @@ public class SampleableListImplTest {
 
         System.out.println(SL.isEmpty());
         System.out.println(SL.size());
+
+        System.out.println(SL.sample().isEmpty());
 
         String A = "A";
         String B = "B";
