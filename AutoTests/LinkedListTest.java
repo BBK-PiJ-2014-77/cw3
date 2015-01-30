@@ -40,6 +40,16 @@ public class LinkedListTest {
     }
 
     @Test
+    public void testGet2(){
+        TestLL.add(A);
+        TestLL.add(B);
+        TestLL.add(C);
+        Object expected = ErrorMessage.INDEX_OUT_OF_BOUNDS;
+        Object observed = TestLL.get(-1).getReturnValue();
+        assertEquals(expected, observed);
+    }
+
+    @Test
     public void testRemove(){
         TestLL.add(A);
         TestLL.add(B);

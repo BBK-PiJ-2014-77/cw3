@@ -9,8 +9,24 @@ import Error.ErrorMessage;
  */
 public class LinkedList implements List {
 
+    /**
+     * Instance of node class to wrap around the list object
+     */
 
     private Node First = new Node();
+
+    /**
+     * Constructor Method
+     */
+
+    public LinkedList(){
+
+    }
+
+    /**
+     * Method to calculate whether Arraylist is empty
+     * @return true if list contains no elements
+     */
 
     public boolean isEmpty() {
         if (First.getObject() == null){
@@ -21,6 +37,11 @@ public class LinkedList implements List {
         }
 
     }
+
+    /**
+     * Method to calculate number of elements in list
+     * @return  number of elements in list
+     */
 
     @Override
     public int size() {
@@ -38,9 +59,15 @@ public class LinkedList implements List {
         }
     }
 
+    /**
+     *Method to return the object at the given position
+     * @param index the position in the list of the item to be retrieved
+     * @return ReturnObject get either object indicated by index or a suitable error message.
+     */
+
     @Override
     public ReturnObject get(int index) {
-        if (index < size()) {
+        if (index >= 0 && index < size()) {
             Node step = steper(index);
             ReturnObject get = new ReturnObjectImpl(step.getObject());
             return get;
