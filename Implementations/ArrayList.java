@@ -8,17 +8,27 @@ import Error.ErrorMessage;
  */
 public class ArrayList implements List {
 
-    private Object[] Array = new Object[INIIALSIZE];
-    private static int INIIALSIZE = 5;
+    /**
+     * create instance array and set initial size and set freespace counter to 0
+     */
 
-    private int size = INIIALSIZE;
+    private static int INITALSIZE = 5;
+    private Object[] Array = new Object[INITALSIZE];
+    private int size = INITALSIZE;
     private int freespace = 0;
 
     /**
      * Constructor Method
      */
+
     public ArrayList(){
     }
+
+    /**
+     * Method to calculate whether Arraylist is empty
+     * @return true if list contains no elements
+     */
+
 
     @Override
     public boolean isEmpty() {
@@ -30,10 +40,22 @@ public class ArrayList implements List {
         }
     }
 
+    /**
+     * Method to calculate number of elements in list
+     * @return freespace counter for number of elements in list
+     */
+
     @Override
     public int size() {
         return freespace;
     }
+
+    /**
+     *
+     * @param index the position in the list of the item to be retrieved
+     * @return ReturnObject get either element from the array indicated by index or a suitable error message.
+     */
+
 
     @Override
     public ReturnObject get(int index) {
@@ -53,6 +75,14 @@ public class ArrayList implements List {
         }
     }
 
+    /**
+     *
+     * returns the object called for but then cuts it out of the array and reduces the counter freespace by 1
+     *
+     * @param index the position in the list of the item to be removed
+     * @return ReturnObject remove indicated by index
+     */
+
     @Override
     public ReturnObject remove(int index) {
         if (index > freespace) {
@@ -68,6 +98,17 @@ public class ArrayList implements List {
         }
     }
 
+    /**
+     *
+     * adds a new object to the list at the position requested by the index parameter
+     *
+     * @param index the position at which the item should be inserted in
+     *              the list
+     * @param item the object to insert into the list
+     * @return ReturnObject add which is an error message of either "out of bounds" if bigger than present array or
+     * no error
+     */
+
     @Override
     public ReturnObject add(int index, Object item) {
         if (freespace == size -2){
@@ -75,6 +116,10 @@ public class ArrayList implements List {
         }
         if (index >= freespace){
             ReturnObject add = new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
+            return add;
+        }
+        if (item == null){
+            ReturnObject add = new ReturnObjectImpl(ErrorMessage.INVALID_ARGUMENT);
             return add;
         }
         for (int i = freespace; i >= index; i--){
@@ -85,6 +130,14 @@ public class ArrayList implements List {
         ReturnObject add = new ReturnObjectImpl(ErrorMessage.NO_ERROR);
         return add;
     }
+
+    /**
+     * adds a new object to the list
+     *
+     *
+     * @param item the object to insert into the list
+     * @return
+     */
 
     @Override
     public ReturnObject add(Object item) {
@@ -98,10 +151,14 @@ public class ArrayList implements List {
             return add;
         }
         else {
-            ReturnObject add = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
+            ReturnObject add = new ReturnObjectImpl(ErrorMessage.INVALID_ARGUMENT);
             return add;
         }
     }
+
+    /**
+     * method to increase space in the array
+     */
 
     private void increaseSpace(){
         Object NA[] = new Object[size * 2];

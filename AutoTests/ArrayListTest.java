@@ -71,6 +71,19 @@ public class ArrayListTest {
     }
 
     @Test
+    public void testAdd2() {
+
+        Object expected = ErrorMessage.INVALID_ARGUMENT;
+        TestAL.add(A);
+        TestAL.add(B);
+        TestAL.add(C);
+        String I = null;
+        Object output = TestAL.add(2, I).getReturnValue();
+        assertEquals(expected, output);
+    }
+
+
+    @Test
     public void testAddout(){
         TestAL.add(A);
         TestAL.add(B);
