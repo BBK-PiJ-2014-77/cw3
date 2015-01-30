@@ -9,6 +9,11 @@ import Error.ErrorMessage;
  */
 public class FunctionalArrayList extends ArrayList implements FunctionalList {
 
+    /**
+     * Method to return the first entry into a list
+     * @return ReturnObject head
+     */
+
 
     @Override
     public ReturnObject head() {
@@ -21,6 +26,11 @@ public class FunctionalArrayList extends ArrayList implements FunctionalList {
             return head;
         }
     }
+
+    /**
+     * Method to return a new FunctionaList that contains everything except the initial entry
+     * @return FunctionalList rest
+     */
 
     @Override
     public FunctionalList rest() {
