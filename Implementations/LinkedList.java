@@ -78,13 +78,18 @@ public class LinkedList implements List {
         }
     }
 
+    /**
+     * method to remove an object at the given position
+     * @param index the position in the list of the item to be removed
+     * @return ReturnObject return the object which is to be removed or a suitable error message
+     */
     @Override
     public ReturnObject remove(int index) {
         if (isEmpty()){
             ReturnObject remove = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
             return remove;
         }
-        else if (index < size()){
+        else if (index >= 0 && index < size()){
             Node step = steper(index);
             ReturnObject remove = new ReturnObjectImpl(step.getObject());
             if (index == 0){
@@ -105,8 +110,20 @@ public class LinkedList implements List {
         }
     }
 
+    /**
+     * method to add an object into the list at a specific point
+     * @param index the position at which the item should be inserted in
+     *              the list
+     * @param item the object to insert into the list
+     * @return A ReturnObject either showing an error message or no Error
+     */
+
     @Override
     public ReturnObject add(int index, Object item) {
+        if (item == null){
+            ReturnObject add = new ReturnObjectImpl(ErrorMessage.INVALID_ARGUMENT);
+            return add;
+        }
         if (index == 0){
             Node newNode = new Node(item);
             if (!isEmpty()){
@@ -116,7 +133,7 @@ public class LinkedList implements List {
             ReturnObject add = new ReturnObjectImpl(ErrorMessage.NO_ERROR);
             return add;
         }
-        else if (index < size()){
+        else if (index >= 1 && index < size()){
             Node newNode = new Node(item);
             newNode.setNextNode(steper(index));
             steper(index -1).setNextNode(newNode);
@@ -129,10 +146,19 @@ public class LinkedList implements List {
         }
     }
 
+    /**
+     * A method to add a new object to the list
+     * @param item the object to insert into the list
+     * @return ReturnObject containing either an error message or "No Error"
+     */
+
     @Override
     public ReturnObject add(Object item) {
+        if (item == null){
+            ReturnObject add = new ReturnObjectImpl(ErrorMessage.INVALID_ARGUMENT);
+            return add;
+        }
         if (isEmpty()) {
-  //          First = new Node();
             First.setObject(item);
         } else {
             Node add = First;
@@ -145,6 +171,12 @@ public class LinkedList implements List {
         }
         return new ReturnObjectImpl(ErrorMessage.NO_ERROR);
     }
+
+    /**
+     * a private method to step through the list to the required point and then return the next node
+     * @param index
+     * @return Node step the next node along from position indicated by index
+     */
 
     private Node steper(int index){
         Node step = First;
