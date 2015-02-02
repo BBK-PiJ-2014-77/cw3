@@ -1,7 +1,7 @@
 package Tests;
 
 import Implementations.SampleableListImpl;
-import Interfaces.SampleableList;
+import cw3.SampleableList;
 
 /**
  * Created by digibrose on 19/12/2014.

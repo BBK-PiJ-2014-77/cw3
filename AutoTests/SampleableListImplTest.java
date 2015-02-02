@@ -1,7 +1,7 @@
 package AutoTests;
 
 import Implementations.SampleableListImpl;
-import Interfaces.SampleableList;
+import cw3.SampleableList;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

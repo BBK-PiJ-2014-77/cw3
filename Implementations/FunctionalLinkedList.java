@@ -1,8 +1,8 @@
 package Implementations;
 
-import Interfaces.FunctionalList;
-import Interfaces.ReturnObject;
-import Error.ErrorMessage;
+import cw3.FunctionalList;
+import cw3.ReturnObject;
+import cw3.ErrorMessage;
 
 /**
  * Created by digibrose on 18/12/2014.

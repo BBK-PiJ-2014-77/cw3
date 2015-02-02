@@ -1,7 +1,7 @@
 package Implementations;
 
 
-import Interfaces.SampleableList;
+import cw3.SampleableList;
 
 
 /**

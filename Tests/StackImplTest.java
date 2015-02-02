@@ -2,7 +2,7 @@ package Tests;
 
 import Implementations.LinkedList;
 import Implementations.StackImpl;
-import Interfaces.List;
+import cw3.List;
 
 /**
  * Created by digibrose on 19/12/2014.

@@ -2,10 +2,10 @@ package AutoTests;
 
 import Implementations.LinkedList;
 import Implementations.StackImpl;
-import Interfaces.List;
-import Interfaces.Stack;
+import cw3.List;
+import cw3.Stack;
 import org.junit.Test;
-import Error.ErrorMessage;
+import cw3.ErrorMessage;
 
 import static org.junit.Assert.*;
 

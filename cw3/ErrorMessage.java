@@ -1,4 +1,4 @@
-package Error;
+package cw3;
 
 public enum ErrorMessage {
     /**

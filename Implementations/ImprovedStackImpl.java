@@ -1,10 +1,9 @@
 package Implementations;
 
-import Interfaces.ImprovedStack;
-import Interfaces.List;
-import Interfaces.ReturnObject;
-import Interfaces.Stack;
-import com.sun.org.apache.bcel.internal.generic.NEW;
+import cw3.ImprovedStack;
+import cw3.List;
+import cw3.ReturnObject;
+import cw3.Stack;
 
 /**
  * Created by digibrose on 19/12/2014.

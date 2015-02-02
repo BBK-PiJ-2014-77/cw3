@@ -1,4 +1,4 @@
-package Interfaces;
+package cw3;
 
 /**
  * A list is a collection of objects that are sorted and can be
@@ -17,7 +17,7 @@ package Interfaces;
  * covered exceptions yet, we need another mechanism to report
  * errors. In order to do that, methods of this list will return a
  * {@see ReturnObject} that will contain either an object or an error
- * value of the right kind (as defined in {@see Error.ErrorMessage}).
+ * value of the right kind (as defined in {@see cw3.ErrorMessage}).
  * 
  * @author PiJ
  */

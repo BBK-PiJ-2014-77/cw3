@@ -1,4 +1,4 @@
-package Interfaces;
+package cw3;
 /**
  * A functional list is a list with a few additional methods that are
  * common in functional languages (such as Lisp, Clojure, or Haskell)
@@ -10,7 +10,7 @@ package Interfaces;
  * need another mechanism to report errors. In order to do that,
  * methods of this list will return a {@see ReturnObject} that will
  * contain either an object or an error value of the right kind (as
- * defined in {@see Error.ErrorMessage}).
+ * defined in {@see cw3.ErrorMessage}).
  * 
  * @author PiJ
  */

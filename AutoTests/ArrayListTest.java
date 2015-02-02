@@ -1,11 +1,8 @@
 package AutoTests;
 
 import Implementations.ArrayList;
-import Implementations.ReturnObjectImpl;
-import Interfaces.ReturnObject;
-import org.junit.Before;
 import org.junit.Test;
-import Error.ErrorMessage;
+import cw3.ErrorMessage;
 
 import static org.junit.Assert.*;
 

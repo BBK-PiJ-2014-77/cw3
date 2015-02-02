@@ -1,7 +1,7 @@
 package Tests;
 
 import Implementations.ReturnObjectImpl;
-import Error.ErrorMessage;
+import cw3.ErrorMessage;
 
 /**
  * Created by digibrose on 11/12/2014.

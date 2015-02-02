@@ -1,7 +1,6 @@
 package Tests;
 import Implementations.FunctionalArrayList;
-import Implementations.ArrayList;
-import Interfaces.FunctionalList;
+import cw3.FunctionalList;
 
 /**
  * Created by digibrose on 18/12/2014.

@@ -4,7 +4,7 @@ import Implementations.FunctionalArrayList;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import Error.ErrorMessage;
+import cw3.ErrorMessage;
 
 public class FunctionalArrayListTest {
 

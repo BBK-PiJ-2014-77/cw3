@@ -2,9 +2,8 @@ package AutoTests;
 
 import Implementations.ImprovedStackImpl;
 import Implementations.LinkedList;
-import Interfaces.ImprovedStack;
-import Interfaces.List;
-import Interfaces.Stack;
+import cw3.ImprovedStack;
+import cw3.List;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

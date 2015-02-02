@@ -1,7 +1,7 @@
 package Implementations;
-import Interfaces.List;
-import Interfaces.ReturnObject;
-import Error.ErrorMessage;
+import cw3.List;
+import cw3.ReturnObject;
+import cw3.ErrorMessage;
 
 /**
  * Created by digibrose on 10/12/2014.

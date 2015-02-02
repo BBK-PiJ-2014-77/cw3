@@ -1,6 +1,6 @@
 package Implementations;
-import Interfaces.ReturnObject;
-import Error.ErrorMessage;
+import cw3.ReturnObject;
+import cw3.ErrorMessage;
 
 /**
  * Created by ubcg49ac on 09/12/2014.  Implementation class for the ReturnObject interface

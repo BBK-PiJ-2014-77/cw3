@@ -1,11 +1,11 @@
 package AutoTests;
 
 import Implementations.ReturnObjectImpl;
-import Interfaces.ReturnObject;
+import cw3.ReturnObject;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import Error.ErrorMessage;
+import cw3.ErrorMessage;
 
 public class ReturnObjectImplTest {
 

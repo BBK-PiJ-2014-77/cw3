@@ -1,4 +1,4 @@
-package Interfaces;
+package cw3;
 /**
  * An implementation of a stack with additional methods. 
  * 
@@ -11,7 +11,7 @@ package Interfaces;
  * mechanism to report errors. In order to do that, methods of this
  * list will return a {@see ReturnObject} that will contain either an
  * object or an error value of the right kind (as defined in {@see
- * Error.ErrorMessage}).
+ * cw3.ErrorMessage}).
  * 
  * @author PiJ
  */

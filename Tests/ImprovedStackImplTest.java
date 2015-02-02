@@ -2,8 +2,8 @@ package Tests;
 
 import Implementations.LinkedList;
 import Implementations.ImprovedStackImpl;
-import Interfaces.ImprovedStack;
-import Interfaces.List;
+import cw3.ImprovedStack;
+import cw3.List;
 
 /**
  * Created by digibrose on 19/12/2014.
